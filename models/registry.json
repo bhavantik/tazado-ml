@@ -1,0 +1,10 @@
+{
+  "fruit_detection": {
+    "version": "v1",
+    "path": "models/fruit_detection/v1/model.tflite"
+  },
+  "fruit_variety": {
+    "version": "v1",
+    "path": "models/fruit_variety/v1/model.tflite"
+  }
+}
