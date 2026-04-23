@@ -1,10 +1,47 @@
 {
-  "fruit_detection": {
-    "version": "v1",
-    "path": "models/fruit_detection/v1/model.tflite"
+  "models": {
+    "fruit_detection": {
+      "name": "Mango Detection (Binary Classification)",
+      "path": "C:\\Users\\Bhavantik\\Desktop\\tazado\\tazado-ml\\models\\fruit_detection.keras",
+      "framework": "TensorFlow",
+      "backbone": "MobileNetV3Small",
+      "weights": "imagenet",
+      "input_size": 224,
+      "output_classes": [
+        "not_mango",
+        "mango"
+      ],
+      "description": "Detects if image contains mango or not"
+    },
+    "fruit_variety": {
+      "name": "Mango Variety Classification",
+      "path": "C:\\Users\\Bhavantik\\Desktop\\tazado\\tazado-ml\\models\\fruit_variety.keras",
+      "framework": "TensorFlow",
+      "backbone": "MobileNetV3Small",
+      "weights": "imagenet",
+      "input_size": 224,
+      "output_classes": [
+        "alphonso",
+        "kesar",
+        "langda",
+        "other"
+      ],
+      "description": "Classifies variety of mango (Alphonso, Kesar, Langda, Other)"
+    }
   },
-  "fruit_variety": {
-    "version": "v1",
-    "path": "models/fruit_variety/v1/model.tflite"
+  "pipeline": {
+    "inference_flow": [
+      {
+        "stage": 1,
+        "model": "fruit_detection",
+        "threshold": 0.5
+      },
+      {
+        "stage": 2,
+        "model": "fruit_variety",
+        "condition": "if_mango"
+      }
+    ],
+    "not_mango_message": "Model not trained for this object. Please upload mango image."
   }
 }

@@ -1,0 +1,12 @@
+2026-04-22 01:37:35 - tazado_cli - INFO - 
+============================================================
+2026-04-22 01:37:35 - tazado_cli - INFO - PREDICTION RESULT
+2026-04-22 01:37:35 - tazado_cli - INFO - ============================================================
+2026-04-22 01:37:35 - tazado_cli - INFO - Mango detected! Variety: langda (39.01% confidence)
+2026-04-22 01:37:35 - tazado_cli - INFO - 
+Detailed Results:
+2026-04-22 01:37:35 - tazado_cli - INFO -   Image: data/raw/mango/kesar/google_001.jpeg
+2026-04-22 01:37:35 - tazado_cli - INFO -   Is Mango: True
+2026-04-22 01:37:35 - tazado_cli - INFO -   Mango Confidence: 0.5371
+2026-04-22 01:37:35 - tazado_cli - INFO -   Variety: langda
+2026-04-22 01:37:35 - tazado_cli - INFO -   Variety Confidence: 0.3901
